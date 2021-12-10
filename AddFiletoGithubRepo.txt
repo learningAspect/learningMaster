@@ -1,0 +1,48 @@
+******  create a new repository on the command line **************
+
+echo "# learningMaster" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/learningAspect/learningMaster.git
+git push -u origin main
+
+
+***********  push an existing repository from the command line ****************
+git remote add origin https://github.com/learningAspect/learningMaster.git
+git branch -M main
+git push -u origin main
+
+
+****** Adding a file to a repository using the command line *********************
+You can upload an existing file to a repository on GitHub.com using the command line.
+
+Tip: You can also add an existing file to a repository from the GitHub website.
+
+Prerequisites :- 
+
+1. Created a repository on GitHub, or have an existing repository owned by someone else you'd like to contribute to
+2. Cloned the repository locally on your computer
+Warning: Never git add, commit, or push sensitive information to a remote repository. Sensitive information can include, but is not limited to:
+
+Passwords
+SSH keys
+AWS access keys
+API keys
+Credit card numbers
+PIN numbers
+For more information, see "Removing sensitive data from a repository."
+
+On your computer, move the file you'd like to upload to GitHub into the local directory that was created when you cloned the repository.
+Open Git Bash.
+Change the current working directory to your local repository.
+Stage the file for commit to your local repository.
+$ git add .
+# Adds the file to your local repository and stages it for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+Commit the file that you've staged in your local repository.
+$ git commit -m "Add existing file"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+Push the changes in your local repository to GitHub.com.
+$ git push origin your-branch
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
